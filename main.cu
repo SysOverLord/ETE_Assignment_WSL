@@ -33,7 +33,6 @@ cudaError_t createTeamsWithCuda(Team* teams, Runner* runners, const int size);
 //cudaError_t simulateRaceWithCuda(Team* teams, Runner* runners, int* finished_team_count, int* placements, const int size);
 cudaError_t simulateRaceWithCuda(Team* teams, Runner* runners, int* finishedTeamCount, int* placements, int* consoleTeams, const int consoleSize, const int size);
 
-__device__ int lock = 0;
 
 __global__ void createTeamKernel(Team* teams, Runner* runners)
 {
